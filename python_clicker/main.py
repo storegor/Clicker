@@ -131,7 +131,7 @@ while is_work:
         if improve_btc_autoclick.collidepoint(pygame.mouse.get_pos()) and pygame.mouse.get_pressed()[0] == 1:
             if sum_btc >= 0.05:
                 sum_btc -= 0.05
-                btc_autoclick += 0.0003
+                btc_autoclick += 0.0002
 
         amount_btc = pygame.font.SysFont('arial', 15).render(str(sum_btc)[:6], False, kBTC_COLOR, None)
         text_btc_c_click = pygame.font.SysFont('arial', 15).render(str(btc_per_click)[:6], False, kBTC_COLOR, None)
