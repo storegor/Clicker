@@ -159,6 +159,3 @@ while is_work:
         pygame.display.update()
 
     clock.tick(kFPS)
-
-
-
