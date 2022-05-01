@@ -52,6 +52,15 @@ class Game:
         self.window_.blit(text_autoclick, (3 * (self.w_sell_ // 2) + 25, self.h_sell_ * 0))
         self.window_.blit(text_amount, (5 * (self.w_sell_ // 2) + 30, self.h_sell_ * 0))
 
+    def show_amount(self):
+        amount_btc = pygame.font.SysFont('arial', 15).render(str(self.sum_coins_)[:6], False, self.btc_colour_, None)
+        self.window_.blit(amount_btc, (2.5 * self.w_sell_ + 1, self.h_sell_))
+
+    def show_autoclick(self):
+        count_autoclick_btc = pygame.font.SysFont('arial', 15).render(str(self.coins_autoclick_)[:6], False, self.btc_colour_, None)
+        self.window_.blit(count_autoclick_btc, (1.5 * self.w_sell_ + 1, self.h_sell_))
+
+
     def autominer(self):
         self.sum_coins_ += self.coins_autoclick_
 
@@ -75,7 +84,7 @@ class Game:
                     break
 
 
-
-
+            self.show_autoclick()
+            self.show_amount()
             pygame.display.update()
         self.clock_.tick(self.fps_)
