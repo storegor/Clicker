@@ -18,7 +18,7 @@ class ImproveButton:
     def __init__(self, screen):
         self.w_sell_ = 100
         self.h_sell_ = 20
-        self.surf_ = pygame.Surface((self.w_sell_ + 20, self.h_sell_ + 2))
+        self.surf_ = pygame.Surface((self.w_sell_ + 50, self.h_sell_ + 2))
         self.red_ = (255, 0, 0)
         self.white_ = (255, 255, 255)
         self.screen_ = screen
